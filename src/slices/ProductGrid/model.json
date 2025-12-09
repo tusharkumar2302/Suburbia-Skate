@@ -34,7 +34,7 @@
           "type": "Group",
           "config": {
             "label": "Product",
-            "repeat": false,
+            "repeat": true,
             "fields": {
               "skateboard": {
                 "type": "Link",
@@ -43,7 +43,15 @@
                   "select": "document",
                   "repeat": false,
                   "customtypes": [
-                    "skateboard"
+                    {
+                      "id": "skateboard",
+                      "fields": [
+                        "name",
+                        "image",
+                        "price",
+                        "customizer_link"
+                      ]
+                    }
                   ]
                 }
               }
