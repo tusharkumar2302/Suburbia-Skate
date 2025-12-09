@@ -1,8 +1,8 @@
 {
-  "id": "hero",
+  "id": "product_grid",
   "type": "SharedSlice",
-  "name": "Hero",
-  "description": "Hero",
+  "name": "ProductGrid",
+  "description": "ProductGrid",
   "variations": [
     {
       "id": "default",
@@ -18,7 +18,7 @@
             "label": "Heading",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "heading1"
+            "single": "heading2"
           }
         },
         "body": {
@@ -30,15 +30,24 @@
             "multi": "paragraph,strong,em"
           }
         },
-        "button": {
-          "type": "Link",
+        "product": {
+          "type": "Group",
           "config": {
-            "label": "Button",
-            "placeholder": "",
-            "select": null,
-            "allowTargetBlank": true,
-            "allowText": true,
-            "repeat": false
+            "label": "Product",
+            "repeat": false,
+            "fields": {
+              "skateboard": {
+                "type": "Link",
+                "config": {
+                  "label": "Skateboard",
+                  "select": "document",
+                  "repeat": false,
+                  "customtypes": [
+                    "skateboard"
+                  ]
+                }
+              }
+            }
           }
         }
       },
